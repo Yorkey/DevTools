@@ -3,8 +3,10 @@ package cn.helloyy.devtools
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
+import cn.helloyy.devtools.controller.HomeViewController
 import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Router
+import com.bluelinelabs.conductor.RouterTransaction
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         router = Conductor.attachRouter(this, container, savedInstanceState)
 
         if (router?.hasRootController() == false) {
-
+            router?.setRoot(RouterTransaction.with(HomeViewController(null)))
         }
 
     }
