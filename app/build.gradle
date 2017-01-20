@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 24
@@ -30,6 +31,7 @@ dependencies {
     })
     compile "com.android.support:appcompat-v7:$support_version"
     compile "com.android.support:design:$support_version"
+    compile "com.android.support:cardview-v7:$support_version"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.anko:anko-sdk19:$anko_version" // sdk15, sdk19, sdk21, sdk23 are also available
@@ -47,6 +49,8 @@ dependencies {
     compile 'com.bluelinelabs:conductor:2.0.5'
     compile 'com.jude:easyrecyclerview:4.2.6'
     compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 
     testCompile 'junit:junit:4.12'
 }
